@@ -14,7 +14,8 @@
   position: fixed;
   top: 0;
   background: white;
-  width: calc(100% - 50px);
+  width: 100%;
+  z-index: 1;
 }
 .menu {
   display: none;

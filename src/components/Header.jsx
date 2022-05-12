@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <>
       <nav className={styles.Nav}>
-        <Image width={25} height={60} src={menu} alt="menu" className={styles.menu} />
+        <img width={25} height={60} src={menu.src} alt="menu" className={styles.menu} />
         <div className={styles['navbar-left']}>
           <Link href="/" passHref>
             <a href="replace">
