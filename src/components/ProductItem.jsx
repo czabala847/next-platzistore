@@ -25,13 +25,13 @@ const ProductItem = ({ product }) => {
           <p>${product.price}</p>
           <p>{product.title}</p>
         </div>
-        <figure className={styles['more-clickable-area']} onClick={() => handleClick(product)}>
+        <button className={(styles['more-clickable-area'], styles.ButtonPlain)} onClick={() => handleClick(product)}>
           {state.cart.includes(product) ? (
-            <Image width={35} height={35} className={(styles.disabled, styles['add-to-cart-btn'])} src={addedToCartImage} alt="added to cart" layout="fixed" />
+            <Image width={35} height={35} className={(styles.disabled, styles['add-to-cart-btn'], styles.ButtonPlain)} src={addedToCartImage} alt="added to cart" layout="fixed" />
           ) : (
-            <Image width={35} height={35} className={(styles['add-to-cart-btn'], styles.pointer)} src={addToCartImage} alt="add to cart" layout="fixed" />
+            <Image width={35} height={35} className={((styles['add-to-cart-btn'], styles.pointer), styles.ButtonPlain)} src={addToCartImage} alt="add to cart" layout="fixed" />
           )}
-        </figure>
+        </button>
       </div>
     </div>
   );

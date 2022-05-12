@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from '@styles/Order.module.scss';
+import Image from 'next/image';
+import iconArrow from '@icons/icon_close.png';
 
 const Order = () => {
   return (
@@ -9,7 +11,7 @@ const Order = () => {
         <span>6 articles</span>
       </p>
       <p>$560.00</p>
-      <img src="./icons/flechita.svg" alt="arrow" />
+      <Image width={30} height={30} src={iconArrow} alt="arrow" />
     </div>
   );
 };

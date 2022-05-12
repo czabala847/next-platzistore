@@ -17,39 +17,53 @@ const Header = () => {
       <nav className={styles.Nav}>
         <Image width={25} height={60} src={menu} alt="menu" className={styles.menu} />
         <div className={styles['navbar-left']}>
-          <Link href="/">
-            <Image width={100} height={60} src={logo} alt="logo" className={styles['nav-logo']} />
+          <Link href="/" passHref>
+            <a href="replace">
+              <Image width={100} height={60} src={logo} alt="logo" className={styles['nav-logo']} />
+            </a>
           </Link>
           <ul>
             <li>
-              <a href="/">All</a>
+              <Link href="/" passHref>
+                <a href="replace">All</a>
+              </Link>
             </li>
             <li>
-              <a href="/">Clothes</a>
+              <Link href="/" passHref>
+                <a href="replace">Clothes</a>
+              </Link>
             </li>
             <li>
-              <a href="/">Electronics</a>
+              <Link href="/" passHref>
+                <a href="replace">Electronics</a>
+              </Link>
             </li>
             <li>
-              <a href="/">Furnitures</a>
+              <Link href="/" passHref>
+                <a href="replace">Furnitures</a>
+              </Link>
             </li>
             <li>
-              <a href="/">Toys</a>
+              <Link href="/" passHref>
+                <a href="replace">Toys</a>
+              </Link>
             </li>
             <li>
-              <a href="/">Others</a>
+              <Link href="/" passHref>
+                <a href="replace">Others</a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className={styles['navbar-right']}>
           <ul>
-            <li className={`${styles['more-clickable-area']} ${styles['navbar-email']} ${styles.pointer}`} onClick={() => toggleMenu()}>
+            <button className={(styles['more-clickable-area'], styles.pointer, styles.ButtonPlain)} onClick={() => toggleMenu()}>
               platzi@example.com
-            </li>
-            <li className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
+            </button>
+            <button className={(styles['navbar-shopping-cart'], styles.ButtonPlain)} onClick={() => toggleOrder()}>
               <Image width={25} height={25} className={`${styles['more-clickable-area']} ${styles.pointer}`} src={shoppingCart} alt="shopping cart" />
               {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
-            </li>
+            </button>
           </ul>
         </div>
         {state.menuIsOpen && <Menu />}

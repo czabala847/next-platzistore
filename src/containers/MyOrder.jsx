@@ -3,6 +3,7 @@ import OrderItem from '@components/OrderItem';
 import AppContext from '../context/AppContext';
 import arrow from '@icons/flechita.svg';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '@styles/MyOrder.module.scss';
 
 const MyOrder = () => {
@@ -18,7 +19,7 @@ const MyOrder = () => {
     <aside className={styles.MyOrder}>
       <div className="MyOrder-container">
         <div className="title-container">
-          <img className="more-clickable-area pointer" src={arrow} alt="arrow" onClick={() => toggleOrder()} />
+          <Image className="more-clickable-area pointer" src={arrow} alt="arrow" onClick={() => toggleOrder()} />
           <p className="title">My order</p>
         </div>
         <div className="my-order-content">

@@ -1,5 +1,13 @@
 import ProductList from '@containers/ProductList';
+import Head from 'next/head';
 
 export default function Home() {
-  return <ProductList />;
+  return (
+    <>
+      <Head>
+        <title>Platzi Store</title>
+      </Head>
+      <ProductList />
+    </>
+  );
 }
